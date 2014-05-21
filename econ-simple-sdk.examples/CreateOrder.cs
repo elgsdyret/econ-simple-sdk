@@ -1,7 +1,5 @@
 ﻿using System;
-using System.IO.Pipes;
 using System.Linq;
-using System.Runtime.InteropServices;
 using NUnit.Framework;
 
 namespace econ_simple_sdk.examples
@@ -13,9 +11,8 @@ namespace econ_simple_sdk.examples
 
         [TestFixtureSetUp]
         public void Setup()
-        {
-            // replace with the proper tokens
-            client = ApiClient.Connect("", "");
+        {            
+            client = TestApiClient.Connect();
         }
 
         [TestFixtureTearDown]
